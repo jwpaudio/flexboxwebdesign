@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+    IFT 301 Website Design Project
+    Arizona State University
+
+    Share With Us
+    Author: Joshua Pardridge
+    Date: 16 June 2021
+
+    Filename:   share_with_us.html
+
+-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share With Us</title>
+    <link href="base.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <link href="flex.css" rel="stylesheet" />
+    <link rel="icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <a name="header"></a>
+        <img src="images/logo.png" id="banner" />
+        <nav class="navmain">
+            <ul>
+                <li>
+                    <a href="#">Menu</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="welcome.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="where_to_go.html">Where To Go</a>
+                        </li>
+                        <li>
+                            <a href="my_first_dive.html">My First Dive</a>
+                        </li>
+                        <li>
+                            <a href="certification.html">Certification</a>
+                        </li>
+                        <li>
+                            <a href="equipment.html">Equipment</a>
+                        </li>
+                        <li>
+                            <a href="resources.html">Resources</a>
+                        </li>
+                        <li>
+                            <a href="share_with_us.html">Share With Us</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="bottom-jump"><a href="#footer">Bottom</a></div>
+        </nav>
+        </header>
+        <section id="share-with-us">
+            <h1>Share With Us</h1>
+            <p>Tell us how your first dive went using the form below. We look forward to hearing from you!</p>
+            <form id="share-with-us" action="">
+                <fieldset>
+                    <label for="fname">First Name: </label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last Name: </label>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="rate">Rate your overall dive experience (1-5)</label>
+                    <input type="range" id="rate" name="rate" min="0" max="5" step="1" value="5" oninput="this.nextElementSibling.value = this.value"><output>5</output><br>
+                    <label for="where">Where was your first dive?: </label>
+                    <input type="text" id="where" name="where"><br>
+                    <label>Would you go diving again? </label>
+                    <div id="radio">
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="wouldyou" id="yes" value="Yes">
+                        <label for="no">No</label>
+                        <input type="radio" name="wouldyou" id="no" value="No">
+                    </div>    
+                    <br>
+                    <label for="describe">Describe your experience: </label><br>
+                    <textarea id="describe" name="describe" rows="8" cols="60"></textarea>
+                    <br><br>
+                    <input type="submit" value="Submit" style="font-size: 1.1em;">
+                </fieldset>
+            </form>
+        </section>
+        <footer>
+            <div id="top-jump"><a name="footer" href="#header">Top</a></div>
+            <div>Joshua Pardridge - IFT301</div>
+            <div>
+                <ul class="footernav">
+                    <li><a href="welcome.html">Home</a></li>
+                    <li><a href="where_to_go.html">Where To Go</a></li>
+                    <li><a href="my_first_dive.html">My First Dive</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="share_with_us.html">Share With Us</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

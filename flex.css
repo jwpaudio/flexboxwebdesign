@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/*
+      IFT 301 Website Design Project
+      Arizona State University
+
+      CSS Flex Styles
+      Author: Joshua Pardridge
+      Date: 16 June 2021
+
+      Filename:   flex.css
+
+*/
+
+/* ================
+   Base Flex Styles
+   ================
+*/
+body {
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+header, footer {
+	width: 100%;
+}
+footer {
+    display: inline-block;
+    flex-shrink: 1;  
+}
+.footernav {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* =========================
+   Mobile Styles: 0 to 480px 
+   =========================
+*/
+
+@media only screen and (max-width: 480px) {
+  
+	aside {
+		-webkit-order: 99;
+		order: 99;
+	}
+	footer {
+		-webkit-order: 100;
+		order: 100;
+	}
+    .navmain {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    div#bottom-jump a{
+        padding-right: 0px;
+    }
+	.navmain ul{
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	.navmain li {
+		margin-left: 10px;
+		margin-right: 10px;
+		width: 100%;
+	}
+	.submenu a {
+		border-radius: 0;
+	}
+    .mainpage-section {
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .mainpage-left-section h1 {
+        font-size: 2em;
+        text-align: center;
+        width: 100%;
+    }
+    .mainpage-left-section h2 {
+        font-size: 1.5em;
+    }
+    .mainpage-left-section p {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        text-align: center;
+        text-indent: 0;
+    }
+    .mainpage-left-section {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0;
+        width: 100%;
+    }
+ 
+ 
+}
+
+/* ============================================
+   Tablet and Desktop Styles: 481px and greater 
+   ============================================
+*/
+
+@media only screen and (min-width: 481px) {
+    
+    nav.dropdown-button {
+        display: -webkit-flex;
+        display: flex;
+    }
+    nav.dropdown-button span{
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+
+}
+

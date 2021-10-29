@@ -1,0 +1,539 @@
+@charset "UTF-8";
+/*
+      IFT 301 Website Design Project
+      Arizona State University
+
+      CSS Main Styles
+      Author: Joshua Pardridge
+      Date: 16 June 2021
+
+      Filename:   main.css
+
+*/
+
+/* HTML and body styles */
+html {
+    background: url("images/bubbles.jpeg") repeat;
+}
+
+body {
+    background-color: grey;
+    min-width: 200px;
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+}
+
+/* Body header styles */
+body header {
+    width: 100%;
+}
+#banner {
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+    padding: 0px;
+    border-bottom: 0px;
+	max-height: 300px;
+}
+
+/* Navigation styles */
+.navmain {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.navmain a {
+    color: white;
+    background-color: darkgrey;
+    display: block;
+    height: 45px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    flex-grow: 1;
+    font-family: serif;
+    font-size: 1.3em;
+}
+.navmain li:hover a {
+    background-color: white;
+    color: black;
+}
+.navmain ul {
+    display: flex;
+    justify-content: flex-start;
+}
+.navmain li {
+    position: relative;
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.navmain li:hover .submenu > li {
+    display: block;
+    top: 0px;
+}
+.submenu li {
+    display: none;
+    width: 250px;
+    padding: 0;
+    margin: 0;
+    top: 0px;
+}
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.submenu a {
+    background-color: white;
+    color: black;
+    height: 35px;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.submenu li:hover a {
+    color: white;
+    background-color: grey
+}
+
+/* Bottom Jump Styles */
+div#top-jump {
+    display: flex;
+    align-items: flex-start;
+}
+div#top-jump a {
+    padding-left: 25px;
+    color: black;
+}
+div#bottom-jump a {
+    padding-right: 35px;
+    padding-top: 10px;
+    background: none;
+    font-size: 1em;
+    font-weight: normal;
+    text-decoration: underline;
+    color: black;
+}
+div#bottom-jump {
+    display:flex;
+    align-items: flex-start;
+}
+
+/* Footer Styles */
+footer {
+    margin: 20px;
+	width: 100%;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    line-height: 2em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+footer div {
+    width: 100%;
+}
+.footernav li {
+    padding: 0px 5px 0px 5px;
+}
+.footernav a {
+    font-family: sans-serif;
+    color: black;
+    font-size: 0.9em;
+}
+
+
+
+/* Main page section styles */
+.mainpage-section {
+    width: 100%;
+	display: flex;
+	flex-flow: row;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+}
+.mainpage-section h1 {
+    font-size: 4em;
+    margin-top: 45px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 35px;
+    text-shadow: 2px 2px 2px grey;
+}
+.mainpage-section h2 {
+    font-size: 2em;
+}
+.mainpage-left-section {
+	display: flex;
+	flex-flow: column;
+	width: 75%;
+	align-items: flex-start;
+    margin-left: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 2em;
+}
+.mainpage-right-section {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: 25%;
+}
+.mainpage-left-section p {
+    padding-top: 20px;
+    font-size: 1.8em;
+    padding-bottom: 25px;
+    text-align: left;
+}
+.mainpage-right-section img {
+    width: 100%;
+}
+.mainpage-right-section a {
+    line-height: 0px;
+}
+.dropcaps {
+    font-size: 1.5em;
+}
+
+/* Where To Go Styles */
+section#where-to-go {
+    width: 100%;
+	display: flex;
+	flex-flow: row;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+}
+
+div#wtg-section-left {
+    display: flex;
+    flex-flow: column;
+    width: 66%;
+    line-height: 1.5;
+    padding-right: 20px;
+}
+section#where-to-go h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    width: 100%;
+}
+
+section#where-to-go h2 {
+    font-size: 2em;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+div#wtg-section-left ul {
+    list-style: disc;
+    padding-left: 7ch;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+
+div#wtg-section-left p {
+    font-size: 1.5em;
+    padding-left: 25px;
+}
+div#wtg-section-right {
+	display: flex;
+    flex-flow: column;
+	align-items: center;
+    width: 34%;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+div#wtg-section-right img {
+    width: 100%;
+}
+
+/* My First Dive Styles */
+section#my-first-dive {
+    width: 100%;
+	display: flex;
+	flex-flow: row;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+    line-height: 1.5em;
+
+}
+section#my-first-dive h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    width: 100%;
+}
+section#my-first-dive ol {
+    list-style: decimal;
+    padding-left: 75px;
+    padding-right: 25px;
+    padding-top: 10px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+section#my-first-dive p {
+    font-weight: normal;
+    padding-top: 10px;
+}
+section#my-first-dive li {
+    padding-top: 15px;
+}
+
+/* Certification Styles */
+section#certification {
+    width: 100%;
+	display: flex;
+	flex-flow: column;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+    line-height: 1.5;
+    justify-content: center;
+}
+section#certification h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+section#certification h2 {
+    font-size: 2em;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+section#certification p {
+    font-size: 1.5em;
+    padding-left: 25px;
+}
+section#certification table, th, td {
+    border:  1px solid black;
+    font-size: 1.1em;
+}
+section#certification table {
+    margin-left: 25px;
+    margin-top: 25px;
+}
+section#certification th {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+div#video {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 25px;
+}
+
+/* Equipment Styles */
+section#equipment {
+    width: 100%;
+	display: flex;
+	flex-flow: column;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+    line-height: 1.5;
+    justify-content: center;
+}
+section#equipment h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+section#equipment h2 {
+    font-size: 2em;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+section#equipment p {
+    font-size: 1.5em;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+section#equipment dl {
+    padding-left: 25px;
+}
+section#equipment dt {
+    font-size: 2em;
+    font-weight: bold;
+}
+section#equipment dd {
+    font-size: 1.3em;
+}
+section#equipment img {
+    width: 300px;
+    padding-left: 100px;
+    padding-bottom: 25px;
+}
+
+/* Resources Styles */
+section#resources {
+    width: 100%;
+	display: flex;
+	flex-flow: column;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+    line-height: 1.5;
+    justify-content: center;
+}
+section#resources h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+section#resources h2 {
+    font-size: 2em;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+section#resources p {
+    font-size: 1.5em;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+section#resources dl {
+    padding-left: 25px;
+}
+section#resources dt {
+    font-size: 2em;
+    font-weight: bold;
+}
+section#resources dd {
+    font-size: 1.3em;
+}
+section#resources a {
+    color: black;
+}
+section#resources a:hover {
+    color: blue;
+}
+
+/* Share With Us Styles */
+section#share-with-us {
+    width: 100%;
+	display: flex;
+	flex-flow: column;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+    line-height: 1.5;
+    justify-content: center;
+}
+section#share-with-us h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+section#share-with-us h2 {
+    font-size: 2em;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+section#share-with-us p {
+    font-size: 1.5em;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+form#share-with-us {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+}
+form#share-with-us fieldset {
+display: flex;
+flex-flow: column;
+}
+
+/* References Styles */
+section#references {
+    width: 100%;
+	display: flex;
+	flex-flow: column;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: white;
+    margin: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    padding: 25px;
+    padding-bottom: 45px;
+    line-height: 1.5;
+    justify-content: center;
+}
+section#references h1 {
+    font-size: 3em;
+    padding-left: 25px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-decoration: underline;
+}
+section#references h2 {
+    font-size: 2em;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+section#references p {
+    font-size: 1.5em;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
